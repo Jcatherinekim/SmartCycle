@@ -1,5 +1,6 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
+from .forms import EventForm
+from django.contrib.auth.decorators import login_required
 from rest_framework import generics
 from .models import Event
 from .serializers import EventSerializer
