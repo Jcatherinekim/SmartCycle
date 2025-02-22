@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import SearchBar from './components/SearchBar';
+import CityDropdown from './components/CityDropdown';
+import ResultsDisplay from './components/ResultsDisplay';
 
 function App() {
   return (
