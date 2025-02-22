@@ -22,3 +22,4 @@ urlpatterns = [
     path('api/', include('events.urls')),
     path('api/users/', include('users.urls')),
 ]
+ 
