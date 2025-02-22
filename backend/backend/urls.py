@@ -21,5 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('events.urls')),
     path('api/users/', include('users.urls')),
+    path('auth/', include('dj_rest_auth.urls')),
+    path('auth/google/', include('allauth.socialaccount.urls')),  # Google OAuth
 ]
  
