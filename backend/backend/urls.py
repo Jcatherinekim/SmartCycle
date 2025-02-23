@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from .views import HomePageView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,5 +24,6 @@ urlpatterns = [
     path('api/users/', include('users.urls')),
     path('auth/', include('dj_rest_auth.urls')),
     path('auth/google/', include('allauth.socialaccount.urls')),  # Google OAuth
+    path("home/", HomePageView.as_view(), name="home"),  # Home Page URL
 ]
  
