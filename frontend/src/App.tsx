@@ -20,12 +20,24 @@ import Events from "./components/Events";
 //         </div>
 //     );
 // };
+
+import { GoogleOAuthProvider } from "@react-oauth/google";
+import GoogleLoginButton from "./components/GoogleLoginButton.tsx";
+
+
 const App: React.FC = () => {
     return (
-        <div>
+        <GoogleOAuthProvider clientId="522972270208-bt1di6lqdrqq5u8vd9u96qa7lakiad7a.apps.googleusercontent.com">
+            <div className="p-4">
+                <GoogleLoginButton />
+            </div>
+            <div>
             <Home />  {/* Ensure you're using the correct component name */}
-        </div>
+            </div>
+
+        </GoogleOAuthProvider>
     );
 };
+
 
 export default App;
