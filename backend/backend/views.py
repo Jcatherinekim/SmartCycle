@@ -7,7 +7,7 @@ class HomePageView(APIView):
     def get(self, request):
         query = request.GET.get("q", "")  # Get search query from URL parameters
         if query:
-            events = Event.objects.filter(title__icontains=query)  # Search by title
+            events = Event.objects.filter(location__icontains=query)  # Search by title
         else:
             events = Event.objects.all()
 
