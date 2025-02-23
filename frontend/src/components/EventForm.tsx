@@ -2,6 +2,7 @@ import React from 'react';
 import { CategoryButton } from './CategoryButtonProps.tsx';
 import { InputField } from './InputField.tsx';
 import { TextAreaField } from './TextAreaField.tsx';
+import './EventForm.css'; //for styling
 
 const categories = [
     'Food', 'Exercise', 'Art', 'Games', 'Music',
@@ -14,14 +15,17 @@ interface EventFormProps {
 
 export const EventForm: React.FC<EventFormProps> = ({ onSubmit }) => {
     return (
-        <form onSubmit={onSubmit} className="box-border p-8 bg-yellow-50 rounded-2xl border-8 border-blue-300 border-solid h-[680px] w-[1205px] max-md:mx-auto max-md:my-5 max-md:h-auto max-md:w-[90%] max-sm:p-4">
-            <div className="p-3 text-sm font-bold bg-green-300 rounded text-neutral-100 w-fit">
-                Events
+        <form onSubmit={onSubmit} className="event-form">
+            <div>
+                <button type="submit"
+                        className="event-form__button">
+                    Events
+                </button>
             </div>
-            <h1 className="mx-0 mt-5 mb-10 text-6xl tracking-wide text-center text-blue-400 max-sm:text-4xl">
+            <h1 className="event-form__header">
                 Write a Post
             </h1>
-            <div className="flex flex-wrap gap-2 p-2 mb-5 bg-white rounded-xl max-md:overflow-x-auto max-md:flex-nowrap max-sm:p-1">
+            <div className="event-form__category-container">
                 {categories.map((category) => (
                     <CategoryButton key={category} label={category} />
                 ))}
@@ -43,7 +47,7 @@ export const EventForm: React.FC<EventFormProps> = ({ onSubmit }) => {
                 id="description"
                 placeholder="Type here..."
             />
-            <button type="submit" className="px-6 py-3 mx-auto my-0 text-base bg-green-300 rounded cursor-pointer border-[none] text-neutral-100">
+            <button type="submit" className="add-post-button">
                 Add Post
             </button>
         </form>
