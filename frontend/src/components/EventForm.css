@@ -1,21 +1,22 @@
-/* General Form Styling */
+
 .event-form {
     box-sizing: border-box;
     padding: 2rem;
-    background-color: #fef9c3; /* Light yellow */
-    border-radius: 1.25rem; /* 2xl */
-    border: 8px solid #93c5fd; /* blue-300 */
+    background-color: #fff9db; /* Light yellow */
+    /*border-radius: 1.25rem; !* Rounded corners *!*/
+    /*border: 8px solid #93c5fd; !* Blue-300 *!*/
     width: 100%;
-    max-width: 1205px;
-    height: auto;
+    /*max-width: 1205px;*/
+    height: 100vh;
     margin: auto;
 }
 
-/* Header */
+/* Form Header */
 .event-form__header {
+    font-family: "Lucida Console", monospace;
     font-size: 3rem;
     text-align: center;
-    color: #3b82f6; /* blue-400 */
+    color: #3b82f6; /* Blue-400 */
     margin-top: 1rem;
     margin-bottom: 2rem;
 }
@@ -26,33 +27,20 @@
     }
 }
 
-/* Button Styles */
-.event-form__button {
-    display: inline-block;
-    padding: 1rem 1.5rem;
-    background-color: #4ade80; /* green-300 */
-    color: #f1f5f9;
-    font-size: 1rem;
-    border-radius: 0.5rem;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    transition: background 0.3s ease-in-out;
-}
 
-.event-form__button:hover {
-    background-color: #22c55e; /* Darker green */
-}
-
-/* Category Button Container */
 .event-form__category-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 0.5rem;
     padding: 0.5rem;
     margin-bottom: 1.5rem;
     background: white;
     border-radius: 1rem;
+    width: fit-content;
+    margin-left: auto; /* Centers the container */
+    margin-right: auto; /* Centers the container */
 }
 
 @media (max-width: 768px) {
@@ -65,28 +53,50 @@
 
 /* Category Button */
 .category-button {
+    font-family: "Lucida Console", monospace;
     padding: 0.5rem 1rem;
     font-size: 1rem;
-    border: 1px solid #4ade80;
+    border: 6px solid #A4DA98; /* Green-300 */
     border-radius: 0.5rem;
-    color: #374151;
+    color: #374151; /* Text color */
     background-color: white;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+
 }
 
 .category-button:hover {
-    background-color: #4ade80;
+    background-color: #d1fae5;
     color: white;
 }
 
-/* Input & TextArea */
-.input-field, .text-area-field {
+
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.input-label {
+    font-family: "Lucida Console", monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1f2937; /* Gray-900 */
+    margin-bottom: 0.5rem;
+}
+
+.input-field,
+.text-area-field {
+    font-family: "Lucida Console", monospace;
     width: 100%;
     padding: 0.75rem;
     font-size: 1rem;
     border-radius: 0.5rem;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: white;
+    margin-right: 20px;
 }
 
 .text-area-field {
@@ -94,23 +104,29 @@
     height: 100px;
 }
 
-/* Submit Button */
+
+.event-form__button,
 .add-post-button {
+    display: inline-block;
     padding: 1rem 1.5rem;
+    background-color: #A4DA98;
+    color: white;
     font-size: 1rem;
-    background-color: #4ade80;
     border-radius: 0.5rem;
     border: none;
-    color: white;
     cursor: pointer;
+    text-align: center;
     transition: background 0.3s ease-in-out;
+    font-family: "Lucida Console", monospace;
 }
 
+.event-form__button
 .add-post-button:hover {
-    background-color: #22c55e;
+    background-color: lightgreen;
+    border: 2px antiquewhite;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
     .event-form {
         padding: 1.5rem;

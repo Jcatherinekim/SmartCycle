@@ -8,14 +8,14 @@ interface TextAreaFieldProps {
 
 export const TextAreaField: React.FC<TextAreaFieldProps> = ({ label, id, placeholder }) => {
     return (
-        <div className="mb-5">
-            <label htmlFor={id} className="mb-2 text-base text-stone-900">
+        <div className="input-container">
+            <label htmlFor={id} className="input-label">
                 {label}
             </label>
             <textarea
                 id={id}
                 placeholder={placeholder}
-                className="box-border px-4 py-2 w-full h-20 text-base bg-white rounded-lg border border-solid resize-none border-black border-opacity-10 max-sm:text-sm"
+                className="text-area-field"
             />
         </div>
     );
