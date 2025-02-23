@@ -82,6 +82,7 @@ SOCIALACCOUNT_PROVIDERS = {
         },
     }
 }
+AUTH_USER_MODEL = 'users.CustomUser'
 
 
 ROOT_URLCONF = 'backend.urls'
@@ -163,14 +164,19 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
-    "DEFAULT_AUTHENTICATION_CLASSES": [
-        "rest_framework.authentication.TokenAuthentication",  # 🔹 Token-based authentication
-        "rest_framework.authentication.SessionAuthentication",  # 🔹 For Django's browsable API
-    ],
-    "DEFAULT_PERMISSION_CLASSES": [
-        "rest_framework.permissions.IsAuthenticated",  # 🔹 Require authentication globally
-    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',  # Optional
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
 }
+
+ACCOUNT_LOGIN_METHODS = {'email'}  # Use email instead of username
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None  # Explicitly set username field to None
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False
 
 SITE_ID = 1
 ACCOUNT_EMAIL_REQUIRED = True
