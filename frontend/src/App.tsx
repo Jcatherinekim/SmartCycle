@@ -4,6 +4,9 @@ import { Home } from "./components/Home.tsx"; // Make sure the path is correct
 
 import { ReviewItem } from './components/ReviewItem'; // Import your TSX file
 import Events from "./components/Events";
+import {EventForm} from "./components/EventForm.tsx";
+import './App.css';
+import ExamplesReviewsWeb from "./components/ExamplesReviewsWeb.tsx";
 
 // const App: React.FC = () => {
 //     return (
@@ -20,24 +23,12 @@ import Events from "./components/Events";
 //         </div>
 //     );
 // };
-
-import { GoogleOAuthProvider } from "@react-oauth/google";
-import GoogleLoginButton from "./components/GoogleLoginButton.tsx";
-
-
 const App: React.FC = () => {
     return (
-        <GoogleOAuthProvider clientId="522972270208-bt1di6lqdrqq5u8vd9u96qa7lakiad7a.apps.googleusercontent.com">
-            <div className="p-4">
-                <GoogleLoginButton />
-            </div>
-            <div>
-            <Home />  {/* Ensure you're using the correct component name */}
-            </div>
-
-        </GoogleOAuthProvider>
+        <div>
+            <EventForm />  {/* Ensure you're using the correct component name */}
+        </div>
     );
 };
-
 
 export default App;

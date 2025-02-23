@@ -1,18 +1,13 @@
-"use client";
-
-// @ts-ignore
-import React from "react";
-import { TopNavigation } from "./TopNavigation";
-import { CategoryChips } from "./CategoryChips";
-import { ReviewsList } from "./ReviewsList";
+import React from 'react';
+import {TopNavigation} from './TopNavigation.tsx';
+import {CategoryChips} from './CategoryChips.tsx';
+import {ReviewsList} from './ReviewsList.tsx';
 
 const ExamplesReviewsWeb: React.FC = () => {
     return (
-        <main className="flex overflow-hidden flex-col px-7 pt-7 bg-yellow-50 rounded-2xl border-8 border-blue-300 border-solid max-w-[921px]">
+        <main className="flex flex-col p-7 bg-yellow-50 rounded-2xl border-8 border-blue-300 border-solid max-w-[921px] mx-auto mt-8">
             <TopNavigation />
-            <div className="mt-6">
-                <CategoryChips />
-            </div>
+            <CategoryChips />
             <ReviewsList />
         </main>
     );
