@@ -5,6 +5,7 @@ import { Home } from "./components/Home.tsx"; // Make sure the path is correct
 import { ReviewItem } from './components/ReviewItem'; // Import your TSX file
 import Events from "./components/Events";
 import {EventForm} from "./components/EventForm.tsx";
+import ExamplesReviewsWeb from "./components/ExamplesReviewsWeb.tsx";
 
 // const App: React.FC = () => {
 //     return (
@@ -24,7 +25,7 @@ import {EventForm} from "./components/EventForm.tsx";
 const App: React.FC = () => {
     return (
         <div>
-            <EventForm />  {/* Ensure you're using the correct component name */}
+            <ExamplesReviewsWeb />  {/* Ensure you're using the correct component name */}
         </div>
     );
 };

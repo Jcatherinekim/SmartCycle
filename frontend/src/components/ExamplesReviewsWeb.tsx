@@ -2,9 +2,9 @@
 
 // @ts-ignore
 import React from "react";
-import { TopNavigation } from "./TopNavigation";
-import { CategoryChips } from "./CategoryChips";
-import { ReviewsList } from "./ReviewsList";
+import { TopNavigation } from "./TopNavigation.tsx";
+import { CategoryChips } from "./CategoryChips.tsx";
+import { ReviewsList } from "./ReviewsList.tsx";
 
 const ExamplesReviewsWeb: React.FC = () => {
     return (

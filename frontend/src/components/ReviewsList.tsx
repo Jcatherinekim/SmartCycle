@@ -2,7 +2,7 @@
 
 // @ts-ignore
 import React from "react";
-import { ReviewItem } from "./ReviewItem";
+import { ReviewItem } from "./ReviewItem.tsx";
 
 const reviewsData = [
     {
