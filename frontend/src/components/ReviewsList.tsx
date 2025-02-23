@@ -8,8 +8,6 @@ const reviewsData = [
     {
         title: "List item",
         category: "Category",
-        price: "$$",
-        distance: "1.2 miles away",
         description:
             "Supporting line text lorem ipsum dolor sit amet, consectetur.",
         iconSrc:

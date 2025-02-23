@@ -12,7 +12,6 @@ const categories = [
     "Outdoor",
     "Volunteer",
     "Literature",
-    "Animals",
 ];
 
 export const CategoryChips: React.FC = () => {
