@@ -4,6 +4,7 @@ import { Home } from "./components/Home.tsx"; // Make sure the path is correct
 
 import { ReviewItem } from './components/ReviewItem'; // Import your TSX file
 import Events from "./components/Events";
+import {EventForm} from "./components/EventForm.tsx";
 
 // const App: React.FC = () => {
 //     return (
@@ -23,7 +24,7 @@ import Events from "./components/Events";
 const App: React.FC = () => {
     return (
         <div>
-            <Home />  {/* Ensure you're using the correct component name */}
+            <EventForm />  {/* Ensure you're using the correct component name */}
         </div>
     );
 };
